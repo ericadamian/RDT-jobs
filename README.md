@@ -24,3 +24,11 @@ Accessing phpMyAdmin credentials: Username: root, Password: (*empty*)
 
 
 # Running on website server (GoDaddy)
+
+Website utilizes GoDaddy's Economy Linux Hosting with cPanel Web Hosting (alongside the domain name http://rdt-jobs.com/). Under My Hosting, go to cPanel Admin, and under Files, select file manager. Code is stored in public_html folder. 
+
+Database phpMyAdmin accessible through cPanel Admin>>Databases>>phpMyAdmin. In order to add a new database, go back to Databases>>MySQL Databases>>Create New Database. NOTE: you must also add a user for database. Under same page, enter a new username and password under "Add New User". After adding, make sure to provide correct privileges (ie. all).
+
+
+NOTE: connect.php credentials vary locally versus website server (update database user/pass and server name) that was described above. Server name can be found at the top of the page on phpMyAdmin. Database user/pass is described above for "Add New User".
+
