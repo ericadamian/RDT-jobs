@@ -23,7 +23,7 @@ Open code from file under localhost (typing "localhost" alone opens XAMPP main p
 Accessing phpMyAdmin credentials: Username: root, Password: (*empty*)
 
 
-# Running on website server (GoDaddy)
+# Running on web server (GoDaddy)
 
 Website utilizes GoDaddy's Economy Linux Hosting with cPanel Web Hosting (alongside the domain name http://rdt-jobs.com/). Under My Hosting, go to cPanel Admin>>Files>>File Manager. Code is stored in public_html folder. 
 
