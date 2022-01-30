@@ -88,35 +88,37 @@
 	background-color: #e1e1e1;
 	padding: 17px;
 	text-align: center;
+	overflow: hidden;
 }
 
 /* PCC logo image */
 .logo {
 	float: left;
-	margin: 0px 0px 0px 100px;;
+	margin: 0px 0px 0px 100px;
 }
 
 /* website title */
 .title {
-	color: #a1001c;
-	font-size: 45px;
-	line-height: 62px;
+	color: #be1e2d;
+	font-size: 40px;
 	font-family: Optima;
-	margin: 20px;
+	margin: 10px;
+	line-height: 62px;
+	text-align: center;
+	padding: 10px;
 }
 
 /* subtitle for website title */
 .subtitle {
 	color: black;
-	font-size: 40px;
-	line-height: 40px;
+	font-size: 40px, x-large;
 	font-family: Optima;
-	font-size: x-large;
-	margin-right: 75px;
-	margin-top: -2%;
-    text-indent: 2em;
-    padding-bottom: 5px;
+	line-height: 0px;
+	position: relative;
+	bottom: 20px;
+	padding: 10px;
 }
+
 
 /* logout button (admin.php) */
 .logout{
@@ -184,7 +186,7 @@
 /* footer details */
 .footer {
 	padding: 16px;
-	background-color: #a1001c;
+	background-color: #be1e2d;
 	text-align: center;
 	color: white;
 	font-size: 12px;
