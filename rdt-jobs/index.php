@@ -20,6 +20,7 @@
 		<title>Job Listings: Restorative Dental Technology</title>
 		<meta name="author" content="Eric Adamian">
         <meta name="description" content="Job listings website that can be updated by an administrator.">
+        <meta name="viewport" content="width=1500px" />
         <? include 'bootstrap.php'; ?>
         <link rel="stylesheet" href="styles.css?v=<?php echo time(); ?>">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -31,11 +32,11 @@
 
     	<!-- top navigation bar -->
         <div class="top-nav">
-            <a href="https://pasadena.edu/">PCC Homepage</a>
-            <a href="https://pasadena.edu/academics/divisions/health-sciences/dental-programs/restorative-dentistry/">RDT Program</a>
-            <a href="https://pasadena.edu/academics/divisions/health-sciences/dental-programs/restorative-dentistry/admissions.php">RDT Admission</a>
-            <a href="https://pasadena.edu/academics/divisions/health-sciences/dental-programs/restorative-dentistry/coursework.php">RDT Coursework</a>
-            <a href="#" onClick="alert('Continuing Education page coming soon.')">Continuing Education</a>
+            <b><a href="https://pasadena.edu/">PCC Homepage</a></b>
+            <b><a href="https://pasadena.edu/academics/divisions/health-sciences/dental-programs/restorative-dentistry/">RDT Program</a></b>
+            <b><a href="https://pasadena.edu/academics/divisions/health-sciences/dental-programs/restorative-dentistry/admissions.php">RDT Admission</a></b>
+            <b><a href="https://pasadena.edu/academics/divisions/health-sciences/dental-programs/restorative-dentistry/coursework.php">RDT Coursework</a></b>
+            <b><a href="#" onClick="alert('Continuing Education page coming soon.')">Continuing Education</a></b>
 
             <!-- navigation bar: search container -->
             <div class="search-container">
@@ -53,32 +54,30 @@
         <!-- header -->
         <header class="header">
             <img class="logo" src="other/img/pcc_logo.png" height="137"/>
-            <h1 class="title" >Restorative Dental Technology</h1>
-            <h2 class="subtitle">at Pasadena City College</h2>
+				 <div class="title">Restorative Dental Technology</div>
+				<h2 class="subtitle">at Pasadena City College</h2>
         </header>
 
 
         <!-- table grid -->
-        <div class="table-grid">
-            <div class="grid-header-1">Current Job Listings</div>
+		<div class="table-grid">
+			<div class="grid-header-1">Current Job Listings</div>
 
-
-
-        	<!-- bootstrap design -->
+			<!-- bootstrap design -->
         	<table class="table table-bordered table-striped"> 
 
             	<tr class="table-header">
-	                <th>Job Name</th>
-	                <th>Posting Date</th>
-	                <th>Job Description</th>
-	                <th>Experience</th>
-	                <th>Contact Information</th>
-	                <th>Job Link</th>
-	            </tr>
+		    		<th>Job Name</th>
+		    		<th>Posting Date</th>
+		    		<th>Job Description</th>
+		    		<th>Experience</th>
+		    		<th>Contact Information</th>
+		    		<th>Job Link</th>
+			    </tr>
 
 
-		        <?
-		        	include 'connect.php';
+			    <?
+		    		include 'connect.php';
 
 		        	// query and select data from phpmyadmin table 
 		            $stmt = $pdo->query("SELECT * from jobs_table");
@@ -88,8 +87,9 @@
 
 		            	// proper formatting for table when adding a job
 	                    echo "<tr>";
+	                    $id = $row['id'];
 
-		                for($i = 1; $i < 7; $i++) {
+			    		for($i = 1; $i < 7; $i++) {
 
 		                	// user input replacing \n with <br> for proper spacing/formatting
 		                	$temp = $row[$i];
@@ -97,29 +97,28 @@
 
 		    	
 	                        if ($i == 1) {
-	                            echo "<td style='vertical-align: middle; text-align: center; padding-left: 30px;'><p style='width:100%; max-width:120px;'>".$row[$i]."</p></td>";
+	                            echo "<td style='vertical-align: middle; text-align: center; padding-top: 20px; padding-bottom: 20px;'><p style='width:100%; max-width:200px; margin: auto;'>".$row[$i]."</p></td>";
 	                        }elseif ($i == 2) {
-	                            echo "<td style='vertical-align: middle; text-align: center; padding-left: 30px;'><p style='width:100%; max-width:70px;'>".$row[$i]."</p></td>"; 
+	                            echo "<td style='vertical-align: middle; text-align: center; padding-top: 20px; padding-bottom: 20px;'><p style='width:100%; max-width:170px; margin: auto'>".$row[$i]."</p></td>"; 
 	                        }elseif ($i == 3) {
-	                            echo "<td style='vertical-align: middle;'><p style='width:100%; max-width:350px;'>".$temp."</p></td>"; 
+	                            echo "<td style='vertical-align: middle; text-align: center; padding-top: 20px; padding-bottom: 20px;'><p style='width:100%; max-width:450px; margin: auto'>".$temp."</p></td>"; 
 	                        }elseif ($i == 4) {
-	                        	echo "<td style='vertical-align: middle;'><p style='width:100%; max-width:120px;'>".$temp."</p></td>"; 
+	                        	echo "<td style='vertical-align: middle; text-align: center; padding-top: 20px; padding-bottom: 20px;'><p style='width:100%; max-width:220px; margin: auto'>".$temp."</p></td>"; 
 	                        }elseif ($i == 5) {
-	                        	echo "<td style='vertical-align: middle; text-align: center; padding-left: 50px;'><p style='width:100%; max-width:180px;'>".$temp."</p></td>"; 
+	                        	echo "<td style='vertical-align: middle; text-align: center; padding-top: 20px; padding-bottom: 20px;'><p style='width:100%; max-width:280px; margin: auto'>".$temp."</p></td>"; 
 	                        }elseif ($i == 6) {
 	                        	if($row[$i] == "") {
 	                        		echo'<td></td>';
 	                        	}else {
-	                        		echo "<td style='vertical-align: middle;'><p style='width:100%; max-width:100px; text-align: center;'><a href='".$row[$i]."'>Job Link</a></p></td>";
+	                        		echo "<td style='vertical-align: middle; text-align: center;'><p style='width:100%; margin: auto'><a href='".$row[$i]."'>Job Link</a></p></td>";
 	                        	}
 	                        }             
-                    	}                    
-		                   
-		                echo "</tr>";	                    
-					}
-		        ?>
-	        </table>
-        </div>
+                    	}                  
+		    		}
+			    ?>
+				</table>
+			</form>	
+		</div>
     </body>
 
 
@@ -152,7 +151,7 @@
         </div>
 
 		<p><small>Website created by Eric Adamian</small></p>
-		<small>Copyright &copy; 2021 | <a href="other/privacy-policy.html">Privacy Policy</a></small>
+		<small>Copyright &copy; 2022 | <a href="other/privacy-policy.html">Privacy Policy</a></small>
 
     </footer>
 </html>
