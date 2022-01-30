@@ -77,25 +77,25 @@
 
 		    	
 	                        if ($i == 1) {
-	                            echo "<td style='vertical-align: middle; text-align: center; padding-left: 30px;'><p style='width:100%; max-width:120px;'>".$row[$i]."</p></td>";
+	                            echo "<td style='vertical-align: middle; text-align: center; padding-top: 20px; padding-bottom: 20px;'><p style='width:100%; max-width:200px; margin: auto;'>".$row[$i]."</p></td>";
 	                        }elseif ($i == 2) {
-	                            echo "<td style='vertical-align: middle; text-align: center; padding-left: 30px;'><p style='width:100%; max-width:70px;'>".$row[$i]."</p></td>"; 
+	                            echo "<td style='vertical-align: middle; text-align: center; padding-top: 20px; padding-bottom: 20px;'><p style='width:100%; max-width:170px; margin: auto'>".$row[$i]."</p></td>"; 
 	                        }elseif ($i == 3) {
-	                            echo "<td style='vertical-align: middle;'><p style='width:100%; max-width:350px;'>".$temp."</p></td>"; 
+	                            echo "<td style='vertical-align: middle; text-align: center; padding-top: 20px; padding-bottom: 20px;'><p style='width:100%; max-width:450px; margin: auto'>".$temp."</p></td>"; 
 	                        }elseif ($i == 4) {
-	                        	echo "<td style='vertical-align: middle;'><p style='width:100%; max-width:120px;'>".$temp."</p></td>"; 
+	                        	echo "<td style='vertical-align: middle; text-align: center; padding-top: 20px; padding-bottom: 20px;'><p style='width:100%; max-width:220px; margin: auto'>".$temp."</p></td>"; 
 	                        }elseif ($i == 5) {
-	                        	echo "<td style='vertical-align: middle; text-align: center; padding-left: 50px;'><p style='width:100%; max-width:180px;'>".$temp."</p></td>"; 
+	                        	echo "<td style='vertical-align: middle; text-align: center; padding-top: 20px; padding-bottom: 20px;'><p style='width:100%; max-width:280px; margin: auto'>".$temp."</p></td>"; 
 	                        }elseif ($i == 6) {
 	                        	if($row[$i] == "") {
 	                        		echo'<td></td>';
 	                        	}else {
-	                        		echo "<td style='vertical-align: middle;'><p style='width:100%; max-width:100px; text-align: center;'><a href='".$row[$i]."'>Job Link</a></p></td>";
+	                        		echo "<td style='vertical-align: middle; text-align: center;'><p style='width:100%; margin: auto'><a href='".$row[$i]."'>Job Link</a></p></td>";
 	                        	}
 	                        }             
                     	}
 		    			
-		    			echo "<td style='text-align:center; vertical-align: middle; padding-bottom: 25px;'><a href='process.php?id=$id'>Delete</a></td>";
+		    			echo "<td style='text-align:center; vertical-align: middle; margin: auto'><a href='process.php?id=$id'>Delete</a></td>";
 
 		    			echo "</tr>";	                    
 		    		}
