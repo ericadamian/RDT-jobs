@@ -20,6 +20,7 @@
 		<title>Admin Controls: Update Jobs</title>
 		<meta name="author" content="Eric Adamian">
         <meta name="description" content="Admin controls page to update job listings.">
+	<meta name="viewport" content="width=1500px" />
         <? include 'bootstrap.php'; ?>
         <link rel="stylesheet" href="styles.css?v=<?php echo time(); ?>">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
